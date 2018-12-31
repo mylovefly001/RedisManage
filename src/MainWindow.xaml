@@ -1,0 +1,20 @@
+﻿<Window x:Class="RedisManage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RedisManage"
+        xmlns:extension="clr-namespace:RedisManage.ControlLibrary"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" Background="#F5F5F5" Loaded="MainWindow_OnLoaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="100*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Margin="5,5,5,2.5" Orientation="Horizontal">
+            <extension:ExtensionButton x:Name="BtnServerManage" Template="{StaticResource ButtonTemplate}" Padding="5" ToolTip="管理连接" Orientation="Horizontal" ExistContent="False" Content="管理连接" Icon="ResouceFile/Icon_Connection.png" MoveBackground="#DEDEDE" Click="BtnServerManage_OnClick" />
+        </StackPanel>
+        <Border Grid.Row="1" BorderThickness="1" BorderBrush="#DEDEDE" Background="#FFF" Margin="5,2.5,5,5" />
+    </Grid>
+</Window>
